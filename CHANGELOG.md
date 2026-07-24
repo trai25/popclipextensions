@@ -1,3 +1,26 @@
+### 1.45.7
+
+2026-07-24 09:15
+
+#### CHANGED
+
+- **BulletList** cycles `*`, `-`, and `+` by nesting level instead of a fixed Bullet Prefix
+- Remove the **BulletList** Bullet Prefix preference
+- **Comment**, **CriticMarkup**, and **Editor** offer variants via **submenu** instead of modifier keys
+- Modifier-key shortcuts for **Comment**, **CriticMarkup**, and **Editor** are replaced by submenu actions
+- **LinkCleaner** pastes cleaned text by default; **Command** copies instead; **Command-Option** copies just cleaned URL(s)
+- **LinkCleaner** replaces the **GA Only** option with StretchLink-based cleanup
+- Remove the separate **CopyCleanLinks** extension (merged into **LinkCleaner**)
+
+#### NEW
+
+- **LinkCleaner** **Tidy Amazon URLs** option
+
+#### IMPROVED
+
+- **BulletList** Command-Option clear no longer inserts extra blank lines between items
+- **LinkCleaner** expands and cleans URLs via the **StretchLink.cc** API
+
 ### 1.45.6
 
 2024-12-18 05:42

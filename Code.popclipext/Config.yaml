@@ -3,7 +3,6 @@ identifier: "com.brettterpstra.popclip.extension.code"
 description: "Convert to Markdown inline code or code block."
 icon: "code.png"
 title: "<>"
-shell script file: "code.rb"
-script interpreter: "/usr/bin/ruby"
+javascript file: "code.ts"
 after: "paste-result"
 requirements: ["paste"]

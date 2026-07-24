@@ -65,7 +65,7 @@ Holding Command (⌘) while clicking will remove all list prefixes.
 
 #### Bullet format
 
-When you install this extension, you'll get an options page where you can select the type of bullet you prefer for unordered lists. This can be accessed again later by clicking the pencil button at the bottom of the list, then clicking the gear button next to the BulletList extension.
+Unordered lists cycle markers by nesting level: `*`, `-`, `+`, then back to `*` and repeat.
 
 
 ### CheckURLs
@@ -89,13 +89,14 @@ When creating an inline code block, it will also detect whitespace at the beginn
 
 ### Comment
 
-Turn selected text into an HTML or code comment. 
+Turn selected text into an HTML or code comment.
 
-By default, it surrounds selected text with `<!-- block of text -->` style comment tags. Hold various modifier keys to insert other types of comment markers:
+Choose a style from the submenu:
 
-* **Option**: CSS Comment (`/* block of text */`)
-* **Command**: Hash Comment (`# before each line`)
-* **Command-Option**: Slash comment (`// before each line`)
+* **\<!--**: `<!-- block of text -->`
+* **/\***: `/* block of text */`
+* **#**: `# before each line`
+* **//**: `// before each line`
 
 
 ### CopyPLUS
@@ -137,12 +138,14 @@ PopClip extension to search textingabbreviations.ca for the selected string.
 
 ### Editor
 
-Extension for adding HTML editor marks to text.
+Extension for adding HTML editor marks to text. Choose a style from the submenu:
 
-- No modifier: `<mark>` (highlight)
-- **Control**: `<ins datetime></ins>` (insertion)
-- **Command**: `<del datetime></del>` (deletion)
-- **Option**: `<!-- -->` (comment)
+- **Mark**: `<mark>` (highlight)
+- **Insert**: `<ins datetime></ins>` (insertion)
+- **Delete**: `<del datetime></del>` (deletion)
+- **Comment**: `<!-- -->` (comment)
+
+Insert and Delete include a `datetime` attribute when **Include Datetime** is enabled in the extension options.
 
 
 ### FixPoorlyObscuredEmails
@@ -154,12 +157,12 @@ Hold Option to also open an email window for each matched address. This feature 
 
 ### HardWrap
 
-Add hard wrapping to paragraphs. Default wrap column is 80, hold down Option to wrap at an alternate column (modify both in the extension options). Hold down command to unwrap text, removing line breaks between lines but preserving multiple lines between paragraphs.
+Add or remove hard wrapping of paragraphs. Choose an action from the submenu:
 
-* Clicking wraps at ruler, default 80 characters
-* Option-click to wrap to alternate width
-* Command-click to unwrap text
+* **Wrap**: wrap lines at the configured column (default 80)
+* **Unwrap**: join hard-wrapped lines within paragraphs, preserving blank lines between paragraphs
 
+Set the wrap width with the **Column** option in the extension settings.
 
 
 ### Increment Templated
@@ -285,23 +288,6 @@ Fully outdents the selection, maintaining nested indentation.
 Make rich text go broke.
 
 Strips rich text formatting from selection. There are probably multiple others that do this, but it's so easy I just made it myself.
-
-
-### BulletList
-
-PopClip extension to turn lines of text into Markdown bullet items. Indentation is handled as nested lists and existing markers are overwritten (numbered list becomes bullet list).
-
-#### Numbered lists
-
-Holding Option (⌥) while clicking the button for the extension in the PopClip bar will create/update a numbered list instead. When the list is already a numbered list, it will be re-numbered to fix any gaps or out-of-order numbering within nest levels.
-
-#### Clear list formatting
-
-Holding Command (⌘) while clicking will remove all list prefixes.
-
-#### Bullet format
-
-When you install this extension, you'll get an options page where you can select the type of bullet you prefer for unordered lists. This can be accessed again later by clicking the pencil button at the bottom of the list, then clicking the gear button next to the BulletList extension.
 
 
 ### SkypeCall

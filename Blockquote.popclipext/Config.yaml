@@ -3,7 +3,6 @@ identifier: "com.brettterpstra.popclip.extension.blockquote"
 description: "Turn indented text into nested Markdown blockquote."
 icon: "blockquote.png"
 title: "Quote"
-shell script file: "blockquote.rb"
-script interpreter: "/usr/bin/ruby"
+javascript file: "blockquote.ts"
 after: "paste-result"
 requirements: ["paste"]
