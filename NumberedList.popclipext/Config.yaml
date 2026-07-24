@@ -3,7 +3,6 @@ identifier: com.brettterpstra.popclip.extension.numberedlist
 description: Turn lines into a Markdown numbered list.
 icon: numberlist.png
 title: Numbered List
-shell script file: numberlist.pl
-script interpreter: /usr/bin/perl
+javascript file: numberlist.ts
 after: paste-result
 requirements: [paste]
