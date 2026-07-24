@@ -108,20 +108,22 @@ PopClip extension to append the selection to the current contents in the clipboa
 
 ### CopyURLS
 
-PopClip extension to copy just the URLS in selection.
+PopClip extension to copy just the URLs in the selection, one per line.
 
-Duplicate of OpenURLS, but copies urls to the clipboard, one link per line, instead of opening in browser.
+Duplicate of OpenURLS, but copies URLs to the clipboard instead of opening them in a browser.
+
+- **Option**: join lines first to repair URLs broken across line breaks
 
 
 ### CriticMarkup
 
-Allows the quick insertion of [CriticMarkup][] syntax. Optionally fill in a signature to have a comment included after every insert, deletion or change with your initials or name.
+Allows the quick insertion of [CriticMarkup][] syntax via a submenu. Optionally fill in a signature to have a comment included after every insert, deletion or change with your initials or name.
 
-- No modifier: Highlight
-- **Command**: Deletion
-- **Control**: Insertion
-- **Control-Option**: Change
-- **Option**: Comment
+- Highlight
+- Delete
+- Insert
+- Change
+- Comment
 
 [CriticMarkup]: http://criticmarkup.com/spec.php
 
