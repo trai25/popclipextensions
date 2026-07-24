@@ -1,0 +1,10 @@
+name: "nvUltra"
+identifier: "com.brettterpstra.popclip.extension.nvultra"
+description: "Create a note in nvUltra."
+icon: "rocket.png"
+shell script file: "nvUltra.rb"
+script interpreter: "/usr/bin/ruby"
+options:
+  - identifier: "nvnotebook"
+    type: "string"
+    label: "Folder"

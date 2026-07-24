@@ -26,17 +26,27 @@ my $line;
 my $marker;
 my $item;
 my $leading_space;
-my $prefix = $ENV{"POPCLIP_OPTION_BULLETPREFIX"};
+my @bullet_cycle = ('*', '-', '+');
+my $modifier_flags = $ENV{"POPCLIP_MODIFIER_FLAGS"};
+my $is_numbered = ($modifier_flags == 524288) ? 1 : 0;
+my $is_clear = ($modifier_flags == 1572864) ? 1 : 0;
+
+sub bullet_marker_for_level {
+	my ($level) = @_;
+	return $bullet_cycle[$level % scalar(@bullet_cycle)];
+}
 
 my @resultLines = split /\n/, $ENV{"POPCLIP_TEXT"};
 foreach my $line (@resultLines) {
 	next if $line =~ /^[\s\t]*$/;
-	if ( $ENV{"POPCLIP_MODIFIER_FLAGS"} == 524288 ) { # Option, use numbered list
+	if ( $is_numbered ) { # Option, use numbered list
 		$line =~ s/^([ \t]*)(\d+\. |[\*\+\-] )?/${1}1. /;
-	} elsif ( $ENV{"POPCLIP_MODIFIER_FLAGS"} == 1572864 ) { # Command-option, clear list
-		$line =~ s/^([ \t]*)(\d+\. |[\*\+\-] )?\s*(.*)/${1}${3}\n\n/;
+	} elsif ( $is_clear ) { # Command-option, clear list
+		$line =~ s/^([ \t]*)(\d+\. |[\*\+\-] )?\s*(.*)/${1}${3}/;
+		$result .= $line . "\n";
+		next;
 	} else {
-		$line =~ s/^([ \t]*)(\d+\. |[\*\+\-] )?/${1}$prefix /; # None, use bullet list
+		$line =~ s/^([ \t]*)(\d+\. |[\*\+\-] )?/${1}* /; # None, use bullet list
 	}
 	$line =~ /^([ \t]*)([\*\+\-]|\d+\.)(\.?\s*)(.*)/;
 	$leading_space = $1;
@@ -55,12 +65,16 @@ foreach my $line (@resultLines) {
 		#$result .= "b";
 		$g_list_level++;
 
-		$marker =~ s{
-			(\d+)
-		}{
-			# Reset count
-			"1";
-		}ex;
+		if ($is_numbered) {
+			$marker =~ s{
+				(\d+)
+			}{
+				# Reset count
+				"1";
+			}ex;
+		} else {
+			$marker = bullet_marker_for_level($g_list_level);
+		}
 
 		$last_leading_space = $leading_space;
 
@@ -71,13 +85,17 @@ foreach my $line (@resultLines) {
 		# back to prior list level
 		$g_list_level = length($leading_space) / 4;
 
-		# update marker
-		$marker = $last_marker{$g_list_level};
-		$marker =~ s{
-			(\d+)
-		}{
-			$1+1;
-		}ex;
+		if ($is_numbered) {
+			# update marker
+			$marker = $last_marker{$g_list_level};
+			$marker =~ s{
+				(\d+)
+			}{
+				$1+1;
+			}ex;
+		} else {
+			$marker = bullet_marker_for_level($g_list_level);
+		}
 
 		$last_leading_space = $leading_space;
 
@@ -87,14 +105,18 @@ foreach my $line (@resultLines) {
 		# No change in level
 		#$result .= "d";
 
-		# update marker if it exists
-		if ($last_marker{$g_list_level} ne "") {
-			$marker = $last_marker{$g_list_level};
-			$marker =~ s{
-				(\d+)
-			}{
-				$1+1;
-			}ex;
+		if ($is_numbered) {
+			# update marker if it exists
+			if ($last_marker{$g_list_level} ne "") {
+				$marker = $last_marker{$g_list_level};
+				$marker =~ s{
+					(\d+)
+				}{
+					$1+1;
+				}ex;
+			}
+		} else {
+			$marker = bullet_marker_for_level($g_list_level);
 		}
 
 

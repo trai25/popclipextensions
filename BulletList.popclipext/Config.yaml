@@ -1,0 +1,9 @@
+name: BulletList
+identifier: com.brettterpstra.popclip.extension.bulletlist
+description: Turn lines into a Markdown bullet list. Hold option for numbered list.
+icon: bulletlist.png
+title: Bullet List
+shell script file: bulletlist.pl
+script interpreter: /usr/bin/perl
+after: paste-result
+requirements: [paste]

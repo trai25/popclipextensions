@@ -1,0 +1,9 @@
+name: "Outdent"
+identifier: "com.brettterpstra.popclip.extension.outdent"
+description: "Outdent the selection."
+icon: "outdent.png"
+title: "|<"
+shell script file: "outdent.rb"
+script interpreter: "/usr/bin/ruby"
+after: "paste-result"
+requirements: ["paste"]

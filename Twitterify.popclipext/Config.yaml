@@ -1,0 +1,15 @@
+name: "Twitterify"
+identifier: "com.brettterpstra.popclip.extension.twitterify"
+description: "Converts @names and #hashtags to Twitter urls."
+icon: "icon.png"
+title: "Twitterify"
+regular expression: "(?si)(.*)?(?:\\s|^)[@#]\\w+(.*)?"
+shell script file: "script.rb"
+script interpreter: "/usr/bin/ruby"
+after: "paste-result"
+requirements: ["paste"]
+options:
+  - identifier: "usemarkdown"
+    type: "boolean"
+    label: "Markdown Links"
+    default value: true

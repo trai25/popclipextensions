@@ -12,4 +12,4 @@ Holding Command (⌘) while clicking will remove all list prefixes.
 
 #### Bullet format
 
-When you install this extension, you'll get an options page where you can select the type of bullet you prefer for unordered lists. This can be accessed again later by clicking the pencil button at the bottom of the list, then clicking the gear button next to the BulletList extension.
+Unordered lists now cycle markers by nesting level: `*`, `-`, `+`, then back to `*` and repeat.

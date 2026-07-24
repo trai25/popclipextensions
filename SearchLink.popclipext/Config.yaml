@@ -1,0 +1,9 @@
+name: "SearchLink"
+identifier: "com.brettterpstra.popclip.extension.searchlink"
+description: "Run SearchLink on selected text for inline searching while writing."
+icon: "searchlink.png"
+title: "SearchLink"
+shell script file: "searchlink.rb"
+script interpreter: "/usr/bin/ruby"
+after: "paste-result"
+requirements: ["paste"]

@@ -14,7 +14,7 @@ site](http://brettterpstra.com/projects/bretts-popclip-extensions).
 
 <!--README-->
 
-_Current release version: **<!--VER-->1.45.5<!--END VER-->**
+_Current release version: **<!--VER-->1.45.6<!--END VER-->**
 ([source
 code](https://github.com/ttscoff/popclipextensions/releases/tag/<!--VER-->1.44.8<!--END
 VER-->))_
@@ -96,15 +96,6 @@ By default, it surrounds selected text with `<!-- block of text -->` style comme
 * **Option**: CSS Comment (`/* block of text */`)
 * **Command**: Hash Comment (`# before each line`)
 * **Command-Option**: Slash comment (`// before each line`)
-
-
-### CopyCleanLinks
-
-PopClip extension to lengthen and clean URLs. Duplicate of LinkCleaner, but only copies results to the clipboard.
-
-Option: clean all query strings (default: only clean Google UTM strings)
-Command: Output just the resulting URL(s)
-Command-Option: Output just URL(s) with query strings stripped
 
 
 ### CopyPLUS
@@ -241,13 +232,14 @@ Example:
 
 ### LinkCleaner
 
-PopClip extension to lengthen and clean URLs.
+PopClip extension to lengthen and clean URLs in the selection, then paste the result.
 
-Use extension settings to determine whether it strips Google Analytics strings only, or _all_ query strings.
+Uses the [StretchLink.cc](https://stretchlink.cc/) API for expansion and tracking cleanup.
 
-- Option: force clean all query strings, ignore settings
-- Command: Output just the resulting URL(s)
-- Command-Option: Output just URL(s) with all query strings stripped
+- **Command**: copy cleaned text instead of pasting
+- **Command-Option**: copy just the cleaned URL(s)
+
+Option: **Tidy Amazon URLs** — when enabled, tidies Amazon product links via StretchLink.
 
 
 ### Markdown to Mindmap

@@ -1,9 +1,12 @@
 ### LinkCleaner
 
-PopClip extension to lengthen and clean URLs.
+PopClip extension to lengthen and clean URLs in the selection, then paste the result.
 
-Use extension settings to determine whether it strips Google Analytics strings only, or _all_ query strings.
+Uses the [StretchLink.cc](https://stretchlink.cc/) API for expansion and tracking cleanup.
 
-- Option: force clean all query strings, ignore settings
-- Command: Output just the resulting URL(s)
-- Command-Option: Output just URL(s) with all query strings stripped
+- **Command**: copy cleaned text instead of pasting
+- **Command-Option**: copy just the cleaned URL(s)
+
+#### Options
+
+- **Tidy Amazon URLs**: when enabled, adds StretchLink's `tidy_amazon` parameter to tidy all Amazon product links.

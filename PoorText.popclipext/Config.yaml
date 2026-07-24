@@ -1,0 +1,9 @@
+name: "PoorText"
+identifier: "com.brettterpstra.popclip.extension.poortext"
+description: "Strip rich text formatting"
+icon: "icon.png"
+title: "PoorText"
+shell script file: "script.sh"
+script interpreter: "/bin/bash"
+after: "paste-result"
+requirements: ["paste"]

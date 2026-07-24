@@ -1,0 +1,10 @@
+name: "Increment Templated"
+identifier: "com.brettterpstra.popclip.extension.incrementtemplated"
+description: "Repeat text by incrementing template values."
+icon: "increment.png"
+title: "Increment"
+regular expression: "(?mis)^(.*?)##(\\d+(\\.\\.\\d+)?\\.\\.\\d+|(.+,)+.+)##(.*)$"
+shell script file: "script.rb"
+script interpreter: "/usr/bin/ruby"
+after: "paste-result"
+requirements: ["paste"]

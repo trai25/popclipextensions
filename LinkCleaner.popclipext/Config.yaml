@@ -1,0 +1,13 @@
+name: "LinkCleaner"
+identifier: "com.brettterpstra.popclip.extension.linkcleaner"
+description: "Lengthens and cleans urls in selection. Hold Command to copy instead of paste."
+icon: "icon.png"
+title: "LinkCleaner"
+regular expression: "(?si)(.*)?((http|https):\\/\\/)?[\\w\\-_]+(\\.[\\w\\-_]+)+([\\w\\-\\.,@?^=%&:/~\\+#\\(\\)_]*[\\w\\-\\@^=%&/~\\+#])?(.*)?"
+javascript file: "script.js"
+entitlements: [network]
+options:
+  - identifier: "tidyamazon"
+    type: "boolean"
+    label: "Tidy Amazon URLs"
+    default value: false

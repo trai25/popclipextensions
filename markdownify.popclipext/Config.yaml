@@ -1,0 +1,7 @@
+name: "Markdownify"
+identifier: "com.brettterpstra.popclip.extension.markdownify"
+title: "2MD"
+shell script file: "markdownify.py"
+script interpreter: "/usr/bin/python"
+after: "paste-result"
+requirements: ["paste"]

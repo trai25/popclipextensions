@@ -1,0 +1,10 @@
+name: "CheckURLs"
+identifier: "com.brettterpstra.popclip.extension.checkurls"
+description: "Preview and update all URLs in selection."
+icon: "urlcheck.png"
+title: "Check"
+regular expression: "(?si)(.*)?((http|https):\\/\\/)?[\\w\\-_]+(\\.[\\w\\-_]+)+([\\w\\-\\.,@?^=%&:/~\\+#\\(\\)_]*[\\w\\-\\@^=%&/~\\+#])?(.*)?"
+shell script file: "script.rb"
+script interpreter: "/usr/bin/ruby"
+after: "paste-result"
+requirements: ["paste"]

@@ -14,8 +14,8 @@ else
     ## Switching to using fenced code blocks
     print "```\n#{input}\n```\n"
   else
-    head = input =~ /^(\s+)/ ? $1 : ''
-    tail = input =~ /(\s+)$/ ? $1 : ''
+    head = input =~ /^(\s+)/ ? Regexp.last_match(1) : ''
+    tail = input =~ /(\s+)$/ ? Regexp.last_match(1) : ''
     print "#{head}`#{input.strip}`#{tail}"
   end
 end

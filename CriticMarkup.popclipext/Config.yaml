@@ -1,0 +1,40 @@
+name: CriticMarkup
+identifier: com.brettterpstra.popclip.extension.criticmarkup
+description: Insert CriticMarkup
+icon: icon.png
+requirements: [paste]
+submenu:
+  - title: Highlight
+    identifier: highlight
+    shell script file: script.rb
+    script interpreter: /usr/bin/ruby
+    after: paste-result
+    requirements: [paste]
+  - title: Delete
+    identifier: delete
+    shell script file: script.rb
+    script interpreter: /usr/bin/ruby
+    after: paste-result
+    requirements: [paste]
+  - title: Insert
+    identifier: insert
+    shell script file: script.rb
+    script interpreter: /usr/bin/ruby
+    after: paste-result
+    requirements: [paste]
+  - title: Change
+    identifier: change
+    shell script file: script.rb
+    script interpreter: /usr/bin/ruby
+    after: paste-result
+    requirements: [paste]
+  - title: Comment
+    identifier: comment
+    shell script file: script.rb
+    script interpreter: /usr/bin/ruby
+    after: paste-result
+    requirements: [paste]
+options:
+  - identifier: criticmarkupcomment
+    type: string
+    label: Signature

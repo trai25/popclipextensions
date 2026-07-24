@@ -1,0 +1,7 @@
+name: "CopyPLUS"
+identifier: "com.brettterpstra.popclip.extension.copyplus"
+description: "Append selection to clipboard."
+icon: "copyplus.png"
+title: "CopyPLUS"
+shell script file: "copyplus.sh"
+script interpreter: "/bin/bash"

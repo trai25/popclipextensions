@@ -1,12 +1,7 @@
 #!/usr/bin/ruby
 
-# no modifier: highlight
-# command: delete
-# control: insert
-# control-command: change
-# shift: comment
-
-comment = ENV['POPCLIP_OPTION_CRITICMARKUPCOMMENT']
+# action identifier from Config.yaml submenu
+comment = ENV['POPCLIP_OPTION_CRITICMARKUPCOMMENT'].to_s
 
 commentmarkup = comment == '' ? '' : "{>>#{comment} - #{Time.now.strftime('%F %T')}<<}"
 
@@ -22,16 +17,17 @@ prefix = '{=='
 suffix = '==}'
 
 input = ENV['POPCLIP_TEXT']
+action = ENV['POPCLIP_ACTION_IDENTIFIER']
 
-case ENV['POPCLIP_MODIFIER_FLAGS'].to_i
-when 1048576 # Command
+case action
+when 'delete'
 	print "#{cmdprefix}#{input}#{cmdsuffix}#{commentmarkup}"
-when 131072 # Shift
+when 'comment'
 	print "#{shiftprefix}#{comment}: #{input}#{shiftsuffix}"
-when 262144 # Control
+when 'insert'
 	print "#{ctrlprefix}#{input}#{ctrlsuffix}#{commentmarkup}"
-when 1310720 # control-command
+when 'change'
 	print "#{ctrlcmdprefix}#{input}#{ctrlcmdsuffix}#{commentmarkup}"
-else # none
+else # highlight
 	print "#{prefix}#{input}#{suffix}#{commentmarkup}"
 end

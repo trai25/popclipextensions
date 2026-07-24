@@ -1,0 +1,8 @@
+name: "WebMarkdown"
+identifier: "com.brettterpstra.popclip.extension.webmarkdown"
+description: "Converts text selected in a browser to Markdown in the clipboard."
+title: "WebMD"
+pass html: true
+shell script file: "process.sh"
+script interpreter: "/bin/bash"
+after: "copy-result"

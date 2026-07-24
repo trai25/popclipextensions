@@ -1,0 +1,8 @@
+name: "URLEncode"
+identifier: "com.brettterpstra.popclip.extension.urlencode"
+description: "Percent encode selected text."
+title: "%"
+shell script file: "urlencode.rb"
+script interpreter: "/usr/bin/env ruby"
+after: "paste-result"
+requirements: ["paste"]
