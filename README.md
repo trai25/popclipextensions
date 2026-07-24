@@ -14,7 +14,7 @@ site](http://brettterpstra.com/projects/bretts-popclip-extensions).
 
 <!--README-->
 
-_Current release version: **<!--VER-->1.45.7<!--END VER-->**
+_Current release version: **<!--VER-->1.45.8<!--END VER-->** ([source code](https://github.com/ttscoff/popclipextensions/releases/tag/<!--VER-->1.45.8<!--END VER-->))_
 ([source
 code](https://github.com/ttscoff/popclipextensions/releases/tag/<!--VER-->1.44.8<!--END
 VER-->))_
