@@ -1,11 +1,10 @@
 name: "Twitterify"
 identifier: "com.brettterpstra.popclip.extension.twitterify"
-description: "Converts @names and #hashtags to Twitter urls."
+description: "Converts @names and #hashtags to x.com urls."
 icon: "icon.png"
 title: "Twitterify"
 regular expression: "(?si)(.*)?(?:\\s|^)[@#]\\w+(.*)?"
-shell script file: "script.rb"
-script interpreter: "/usr/bin/ruby"
+javascript file: "script.ts"
 after: "paste-result"
 requirements: ["paste"]
 options:

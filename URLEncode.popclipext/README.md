@@ -1,5 +1,5 @@
 ### URLEncode
 
-Just URL encodes (percent encoding) the selected text using the Ruby URI gem.
+Percent-encodes the selected text (`encodeURIComponent`).
 
 *Also available at [Pilot Moon](http://pilotmoon.com/popclip/extensions/page/URLEncode), same extension.*

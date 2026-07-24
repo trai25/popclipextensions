@@ -303,12 +303,12 @@ Use the options "Separator" and "Decimal Delimiter" to define characters used in
 
 ### Twitterify
 
-Convert all @names and #tags to Markdown or HTML links. You can set the default link type in the extension's options, and manually switch to the other type by holding down Option when running it.
+Convert all @names and #tags to Markdown or HTML links pointing at **x.com** (profiles and hashtag search). You can set the default link type in the extension's options (**Markdown Links**), and manually switch to the other type by holding down Option when running it.
 
 
 ### URLEncode
 
-Just URL encodes (percent encoding) the selected text using the Ruby URI gem.
+Percent-encodes the selected text (`encodeURIComponent`).
 
 *Also available at [Pilot Moon](http://pilotmoon.com/popclip/extensions/page/URLEncode), same extension.*
 
