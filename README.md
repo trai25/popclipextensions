@@ -55,7 +55,7 @@ When adding quote levels, multiple line breaks between lines creates separate bl
 
 PopClip extension to show a popup preview for each URL in selected text. Used for confirming the output of scripts like SearchLink without switching to the browser.
 
-Links are shown sequentially in the order they're found. If a URL is changed by following links in the preview and pressing "OK", the selected text will be updated with the final URL. Because of this, duplicate links in the text are all previewed so they can be modified individually.
+Links are shown sequentially in the order they're found.
 
 
 ### Code
@@ -227,7 +227,9 @@ Uses the [StretchLink.cc](https://stretchlink.cc/) API for expansion and trackin
 - **Command**: copy cleaned text instead of pasting
 - **Command-Option**: copy just the cleaned URL(s)
 
-Option: **Tidy Amazon URLs** — when enabled, tidies Amazon product links via StretchLink.
+#### Options
+
+- **Tidy Amazon URLs**: when enabled, adds StretchLink's `tidy_amazon` parameter to tidy all Amazon product links.
 
 
 ### Markdown to Mindmap
@@ -244,7 +246,7 @@ Turn HTML text into Markdown using html2text.
 
 ### MDList
 
-PopClip extension to turn lines of text into Markdown lists (replaces the old **BulletList** and **NumberedList** extensions). Choose an action from the submenu:
+PopClip extension to turn lines of text into Markdown lists. Choose an action from the submenu:
 
 * **-**: unordered list (markers cycle `*`, `-`, `+` by nesting level)
 * **1.**: numbered list (renumbers existing items; converts bullets to numbers)
@@ -284,6 +286,23 @@ Make rich text go broke.
 Strips rich text formatting from selection. There are probably multiple others that do this, but it's so easy I just made it myself.
 
 
+### BulletList
+
+PopClip extension to turn lines of text into Markdown bullet items. Indentation is handled as nested lists and existing markers are overwritten (numbered list becomes bullet list).
+
+#### Numbered lists
+
+Holding Option (⌥) while clicking the button for the extension in the PopClip bar will create/update a numbered list instead. When the list is already a numbered list, it will be re-numbered to fix any gaps or out-of-order numbering within nest levels.
+
+#### Clear list formatting
+
+Holding Command (⌘) while clicking will remove all list prefixes.
+
+#### Bullet format
+
+When you install this extension, you'll get an options page where you can select the type of bullet you prefer for unordered lists. This can be accessed again later by clicking the pencil button at the bottom of the list, then clicking the gear button next to the BulletList extension.
+
+
 ### Slugify
 
 Turn selected text into a URL-friendly post slug: lowercase, hyphens for spaces, and non-alphanumeric characters removed.
@@ -293,6 +312,7 @@ Also:
 * Accents are folded (`café` → `cafe`)
 * `.` → `-dot-`, `+` → `-plus-`, `&` → `-and-`, `@` → `-at-`
 * Underscores become hyphens; repeated separators collapse
+
 
 ### Sum
 

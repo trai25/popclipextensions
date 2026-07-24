@@ -1,6 +1,6 @@
 ### 1.45.7
 
-2026-07-24 09:15
+2026-07-24 11:25
 
 #### CHANGED
 
@@ -11,15 +11,22 @@
 - **LinkCleaner** pastes cleaned text by default; **Command** copies instead; **Command-Option** copies just cleaned URL(s)
 - **LinkCleaner** replaces the **GA Only** option with StretchLink-based cleanup
 - Remove the separate **CopyCleanLinks** extension (merged into **LinkCleaner**)
-
-#### NEW
-
 - **LinkCleaner** **Tidy Amazon URLs** option
-
-#### IMPROVED
-
 - **BulletList** Command-Option clear no longer inserts extra blank lines between items
 - **LinkCleaner** expands and cleans URLs via the **StretchLink.cc** API
+- **HardWrap** offers **Wrap** and **Unwrap** via **submenu** instead of modifier keys
+- Remove the **HardWrap** Alternate Column preference and Option-click alternate wrap
+- **MDList** submenu offers **-** (bullets), **1.** (numbered), and **X** (clear) instead of modifier keys
+- Replace **BulletList** with **MDList** (new extension id `com.brettterpstra.popclip.extension.mdlist`)
+- Remove the separate **NumberedList** extension (merged into **MDList**)
+- Modifier-key shortcuts for bullet/numbered/clear list actions are replaced by the **MDList** submenu
+- Remove the **SkypeCall** extension
+- **Twitterify** links **@names** and **#hashtags** to **x.com** instead of twitter.com
+- **MDList** combines bullet, numbered, and clear-list actions in one TypeScript extension
+- **HardWrap** unwrap fully joins hard-wrapped lines within a paragraph
+- **Markdown2Mindmap** detects **2-space** or **4-space** list indents and converts them to tabs, leaving existing tab indents alone
+- **Slugify** folds accents and maps `&`/`@`/`_` into readable slug tokens alongside `.`/`+`
+- **IncrementTemplated** correctly expands multiple `##x##` / `##i##` placeholders in one template
 
 ### 1.45.6
 
