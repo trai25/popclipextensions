@@ -1,8 +1,0 @@
-name: NumberedList
-identifier: com.brettterpstra.popclip.extension.numberedlist
-description: Turn lines into a Markdown numbered list.
-icon: numberlist.png
-title: Numbered List
-javascript file: numberlist.ts
-after: paste-result
-requirements: [paste]

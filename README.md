@@ -51,23 +51,6 @@ Turn indented text (or any text) into nested Markdown blockquotes.
 When adding quote levels, multiple line breaks between lines creates separate block quotes (by design). If there's a single blank line between to paragraphs, they'll be joined together as paragraphs within a blockquote. More than one starts a new quote.
 
 
-### BulletList
-
-PopClip extension to turn lines of text into Markdown bullet items. Indentation is handled as nested lists and existing markers are overwritten (numbered list becomes bullet list).
-
-#### Numbered lists
-
-Holding Option (⌥) while clicking the button for the extension in the PopClip bar will create/update a numbered list instead. When the list is already a numbered list, it will be re-numbered to fix any gaps or out-of-order numbering within nest levels.
-
-#### Clear list formatting
-
-Holding Command (⌘) while clicking will remove all list prefixes.
-
-#### Bullet format
-
-Unordered lists cycle markers by nesting level: `*`, `-`, `+`, then back to `*` and repeat.
-
-
 ### CheckURLs
 
 PopClip extension to show a popup preview for each URL in selected text. Used for confirming the output of scripts like SearchLink without switching to the browser.
@@ -259,11 +242,15 @@ List indentation is normalized to tabs. Nested lists that use **2-space** or **4
 Turn HTML text into Markdown using html2text.
 
 
-### NumberedList
+### MDList
 
-PopClip extension to turn lines of text into Markdown numbered items. Will sort and update an existing numbered list as well, and convert bullets on list items to numbers.
+PopClip extension to turn lines of text into Markdown lists (replaces the old **BulletList** and **NumberedList** extensions). Choose an action from the submenu:
 
-This is only here if you want a separate button for numbered lists. Otherwise you can just use BulletList and hold down option to create an ordered list instead.
+* **-**: unordered list (markers cycle `*`, `-`, `+` by nesting level)
+* **1.**: numbered list (renumbers existing items; converts bullets to numbers)
+* **X**: clear list markers
+
+Indentation is handled as nested lists. Existing markers are overwritten when converting between bullet and numbered styles.
 
 
 ### nvUltra
@@ -279,10 +266,15 @@ Originally created by Marc Abramowitz - see [https://github.com/msabramo/nvALT.p
 
 PopClip extension to open all URLS in selection.
 
+- **Option**: join lines first to repair URLs broken across line breaks
+
 
 ### Outdent
 
-Fully outdents the selection, maintaining nested indentation.
+Outdents the selection while keeping relative nesting.
+
+* Click to remove the shared leading indent from all lines
+* **Command**: fully strip leading whitespace from every line
 
 
 ### PoorText
@@ -292,14 +284,15 @@ Make rich text go broke.
 Strips rich text formatting from selection. There are probably multiple others that do this, but it's so easy I just made it myself.
 
 
-### SkypeCall
-
-PopClip extension to call a number with Skype.
-
-
 ### Slugify
 
-Turn selected text into a valid post slug, lowercasing, deleting non-alphanumeric characters, and replacing spaces with hyphens.
+Turn selected text into a URL-friendly post slug: lowercase, hyphens for spaces, and non-alphanumeric characters removed.
+
+Also:
+
+* Accents are folded (`café` → `cafe`)
+* `.` → `-dot-`, `+` → `-plus-`, `&` → `-and-`, `@` → `-at-`
+* Underscores become hyphens; repeated separators collapse
 
 ### Sum
 

@@ -3,7 +3,6 @@ identifier: "com.brettterpstra.popclip.extension.slugify"
 description: "Turn selected text into a valid post slug."
 icon: "hyphen.png"
 title: "-"
-shell script file: "slugger.rb"
-script interpreter: "/usr/bin/ruby"
+javascript file: "slugger.ts"
 after: "paste-result"
 requirements: ["paste"]
