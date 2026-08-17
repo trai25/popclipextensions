@@ -7,3 +7,7 @@ PopClip extension to turn lines of text into Markdown lists. Choose an action fr
 * **X**: clear list markers
 
 Indentation is handled as nested lists. Existing markers are overwritten when converting between bullet and numbered styles.
+
+## Changelog
+
+- 2026-08-01: Convert to use TS and submenus

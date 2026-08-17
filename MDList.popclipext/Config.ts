@@ -4,7 +4,8 @@
 // description: Turn lines into Markdown bullet or numbered lists, or clear list markers.
 // icon: bulletlist.png
 // requirements: [paste]
-
+// keywords: markdown list bullet numbered
+// popclipVersion: 5997
 type ListMode = "bullet" | "numbered" | "clear";
 
 const BULLET_CYCLE = ["*", "-", "+"] as const;
