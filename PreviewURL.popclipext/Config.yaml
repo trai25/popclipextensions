@@ -1,0 +1,11 @@
+name: "PreviewURL"
+identifier: "com.brettterpstra.popclip.extension.previewurl"
+description: "Preview URLs in selection."
+icon: "URLPreview.png"
+title: "PreviewURL"
+regular expression: "(?si)(.*)?((http|https):\\/\\/)?[\\w\\-_]+(\\.[\\w\\-_]+)+([\\w\\-\\.,@?^=%&:/~\\+#\\(\\)_]*[\\w\\-\\@^=%&/~\\+#])?(.*)?"
+shell script file: "previewurl.rb"
+script interpreter: "/usr/bin/ruby"
+after: "show-status"
+popclipVersion: 5997
+keywords: url links preview

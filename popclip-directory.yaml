@@ -1,5 +1,6 @@
 include:
-  - "CriticMarkup.popclipext"
-  - "nvUltra.popclipext"
-  - "MDList.popclipext"
+  - *.popclipext
+exclude:
+  - markdownify.popclipext
+  - Wrappers.popclipext
 versionPrefix: v
