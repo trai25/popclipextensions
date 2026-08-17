@@ -2,3 +2,6 @@
 build.sh
 *.bak
 buildnotes.md
+.cursor
+.github/prompts
+commit_message.txt
