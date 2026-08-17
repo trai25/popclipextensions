@@ -4,6 +4,8 @@
 // description: Turn selected text into an HTML/code comment.
 // icon: comment.png
 // requirements: [paste]
+// popclipVersion: 5997
+// keywords: comment html css code
 
 function prefixLines(text: string, prefix: string): string {
   return text

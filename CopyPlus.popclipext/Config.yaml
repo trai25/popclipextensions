@@ -5,3 +5,5 @@ icon: "copyplus.png"
 title: "CopyPLUS"
 shell script file: "copyplus.sh"
 script interpreter: "/bin/bash"
+popclipVersion: 5997
+keywords: clipboard copy append

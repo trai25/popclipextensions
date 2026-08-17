@@ -6,3 +6,5 @@ title: "Quote"
 javascript file: "blockquote.ts"
 after: "paste-result"
 requirements: ["paste"]
+popclipVersion: 5997
+keywords: markdown quote blockquote

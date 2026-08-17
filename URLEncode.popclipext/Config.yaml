@@ -5,3 +5,5 @@ title: "%"
 javascript file: "urlencode.ts"
 after: "paste-result"
 requirements: ["paste"]
+popclipVersion: 5997
+keywords: url encode percent

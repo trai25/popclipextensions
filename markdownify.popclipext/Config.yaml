@@ -5,3 +5,5 @@ shell script file: "markdownify.py"
 script interpreter: "/usr/bin/python"
 after: "paste-result"
 requirements: ["paste"]
+popclipVersion: 5997
+keywords: markdown convert html

@@ -4,6 +4,8 @@
 // description: Adds ins, del and mark tags to text
 // icon: icon.png
 // requirements: [paste]
+// popclipVersion: 5997
+// keywords: editor html ins del
 
 type EditorOptions = {
   includedatetime?: boolean | string | number;

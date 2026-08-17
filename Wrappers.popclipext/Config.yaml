@@ -26,3 +26,5 @@ options:
   - identifier: "popmakercmdsuffix"
     type: "string"
     label: "⌘ Suffix"
+popclipVersion: 5997
+keywords: wrap surround delimiters

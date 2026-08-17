@@ -6,3 +6,5 @@ title: "-"
 javascript file: "slugger.ts"
 after: "paste-result"
 requirements: ["paste"]
+popclipVersion: 5997
+keywords: slugify url title

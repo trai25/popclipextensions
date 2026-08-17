@@ -8,3 +8,5 @@ shell script file: "script.rb"
 script interpreter: "/usr/bin/ruby"
 after: "paste-result"
 requirements: ["paste"]
+popclipVersion: 5997
+keywords: url links validate

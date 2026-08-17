@@ -6,3 +6,5 @@ pass html: true
 shell script file: "process.sh"
 script interpreter: "/bin/bash"
 after: "copy-result"
+popclipVersion: 5997
+keywords: markdown browser html

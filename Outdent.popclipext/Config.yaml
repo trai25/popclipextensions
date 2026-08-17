@@ -6,3 +6,5 @@ title: "|<"
 javascript file: "outdent.ts"
 after: "paste-result"
 requirements: ["paste"]
+popclipVersion: 5997
+keywords: text indent outdent

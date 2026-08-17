@@ -6,3 +6,5 @@ title: "OpenURLS"
 regular expression: "(?si)(.*)?((http|https):\\/\\/)?[\\w\\-_]+(\\.[\\w\\-_]+)+([\\w\\-\\.,@?^=%&:/~\\+#\\(\\)_]*[\\w\\-\\@^=%&/~\\+#])?(.*)?"
 javascript file: "openurls.ts"
 after: "show-status"
+popclipVersion: 5997
+keywords: url links open browser

@@ -1,4 +1,6 @@
 #!/usr/bin/env ruby
+require 'open3'
+
 debug = ARGV[0] =~ /(debug|-?d)/ ? true : false
 
 unless debug
@@ -13,9 +15,10 @@ ENDINPUT
 end
 
 output = input.dup
+workflow = File.join(__dir__, "PreviewURL.workflow")
 urls = input.scan(/((?:(?:http|https):\/\/)[\w\-_]+(\.[\w\-_]+)+([\w\-\.,@?^=%&amp;:\/~\+#\(\)_]*[\w\-\@^=%&amp;\/~\+#\(\)])?)/mi)
 
-urls.each {|url|
+urls.each do |url|
 
   if url.length == 3
 
@@ -25,11 +28,24 @@ urls.each {|url|
       url = url.sub(/\).*?$/,'')
     end
 
-    new_url = %x{automator -i "#{url}" PreviewURL.workflow 2>/dev/null}.strip
-    if new_url && new_url.length > 0
+    new_url, error, status = Open3.capture3(
+      "/usr/bin/automator", "-i", url, workflow
+    )
+    warn error unless status.success? || error.empty?
+    new_url = new_url.strip
+    if status.success? && new_url.length > 0
       output.sub!(/#{url}/,new_url)
     end
   end
-}
+end
+
+bundle_id = ENV['POPCLIP_BUNDLE_IDENTIFIER']
+if bundle_id && bundle_id.match?(/\A[\w.-]+\z/)
+  system(
+    "/usr/bin/osascript",
+    "-e",
+    "tell application id \"#{bundle_id}\" to activate"
+  )
+end
 print output
 

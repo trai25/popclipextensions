@@ -6,3 +6,5 @@ title: "PoorText"
 javascript file: "script.ts"
 after: "paste-result"
 requirements: ["paste"]
+popclipVersion: 5997
+keywords: plaintext formatting strip

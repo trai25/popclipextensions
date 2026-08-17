@@ -11,3 +11,5 @@ options:
     type: "boolean"
     label: "Tidy Amazon URLs"
     default value: false
+popclipVersion: 5997
+keywords: url links cleanup

@@ -5,3 +5,5 @@ title: "DOT"
 regular expression: "(?si)(.*)AT\\s+[a-z0-9]+\\s+DOT(.*)"
 javascript file: "script.ts"
 after: "paste-result"
+popclipVersion: 5997
+keywords: email deobfuscate address

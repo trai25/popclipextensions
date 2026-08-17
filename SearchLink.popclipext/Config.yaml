@@ -7,3 +7,5 @@ shell script file: "searchlink.rb"
 script interpreter: "/usr/bin/ruby"
 after: "paste-result"
 requirements: ["paste"]
+popclipVersion: 5997
+keywords: markdown link search

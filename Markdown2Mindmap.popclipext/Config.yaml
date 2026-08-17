@@ -5,3 +5,5 @@ icon: "md2mm.png"
 title: "md2mm"
 javascript file: "md2mm.ts"
 after: "copy-result"
+popclipVersion: 5997
+keywords: markdown outline mindmap

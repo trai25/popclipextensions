@@ -12,3 +12,5 @@ options:
     type: "boolean"
     label: "Markdown Links"
     default value: true
+popclipVersion: 5997
+keywords: hashtag mention links

@@ -4,6 +4,8 @@
 // description: Add and remove hard wrapping of paragraphs.
 // icon: hardwrap.png
 // requirements: [paste]
+// popclipVersion: 5997
+// keywords: wrap unwrap paragraphs
 
 type HardWrapOptions = {
   column?: string | number;

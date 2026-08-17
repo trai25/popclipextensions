@@ -7,3 +7,5 @@ regular expression: "(?mis)^(.*?)##(\\d+(\\.\\.\\d+)?\\.\\.\\d+|(.+,)+.+)##(.*)$
 javascript file: "script.ts"
 after: "paste-result"
 requirements: ["paste"]
+popclipVersion: 5997
+keywords: template increment sequence

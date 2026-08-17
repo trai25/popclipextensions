@@ -5,7 +5,7 @@ icon: "icon.png"
 title: "Sum"
 regular expression: "(?s)(.*)?\\d+(.*)?"
 javascript file: "script.ts"
-after: "preview-result"
+after: "copy-result"
 options:
   - identifier: "separator"
     type: "string"
@@ -19,3 +19,5 @@ options:
     type: "boolean"
     label: "Format Output"
     default value: false
+popclipVersion: 5997
+keywords: math total numbers

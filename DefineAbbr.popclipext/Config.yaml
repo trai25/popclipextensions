@@ -3,3 +3,5 @@ identifier: "com.brettterpstra.popclip.extension.DefineAbbr"
 description: "Define Abbr, made with PopMaker by Brett Terpstra"
 title: "LOL"
 javascript file: "script.ts"
+popclipVersion: 5997
+keywords: abbreviation acronym snippets

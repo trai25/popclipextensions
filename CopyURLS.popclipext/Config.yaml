@@ -6,3 +6,5 @@ title: "CopyURLS"
 regular expression: "(?si)(.*)?((http|https):\\/\\/)?[\\w\\-_]+(\\.[\\w\\-_]+)+([\\w\\-\\.,@?^=%&:/~\\+#\\(\\)_]*[\\w\\-\\@^=%&/~\\+#])?(.*)?"
 javascript file: "script.ts"
 after: "copy-result"
+popclipVersion: 5997
+keywords: url links extract clipboard
