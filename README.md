@@ -14,7 +14,7 @@ site](http://brettterpstra.com/projects/bretts-popclip-extensions).
 
 <!--README-->
 
-_Current release version: **<!--VER-->1.45.8<!--END VER-->** ([source code](https://github.com/ttscoff/popclipextensions/releases/tag/<!--VER-->1.45.8<!--END VER-->))_
+_Current release version: **<!--VER-->2.0.3<!--END VER-->** ([source code](https://github.com/ttscoff/popclipextensions/releases/tag/<!--VER-->2.0.3<!--END VER-->))_
 ([source
 code](https://github.com/ttscoff/popclipextensions/releases/tag/<!--VER-->1.44.8<!--END
 VER-->))_
@@ -51,12 +51,17 @@ Turn indented text (or any text) into nested Markdown blockquotes.
 When adding quote levels, multiple line breaks between lines creates separate block quotes (by design). If there's a single blank line between to paragraphs, they'll be joined together as paragraphs within a blockquote. More than one starts a new quote.
 
 
+
+
 ### CheckURLs
 
 PopClip extension to show a popup preview for each URL in selected text. Used for confirming the output of scripts like SearchLink without switching to the browser.
 
 Links are shown sequentially in the order they're found.
 
+## Changelog
+
+- 2026-08-17: Fix to handle refocusing frontmost app before paste-after
 
 ### Code
 
@@ -113,6 +118,9 @@ Allows the quick insertion of [CriticMarkup][] syntax via a submenu. Optionally 
 
 There _is_ a PopClip extension for CriticMarkup in the main download package, which I didn't realize when I whipped this one up. I may defer to that one eventually, but I'll wait until I figure out if mine adds anything worthwhile or not.
 
+## Changelog
+
+- 2026-08-01: Updated to use TypeScript and submenu options instead of modifier keys
 
 ### DefineAbbr
 
@@ -254,6 +262,9 @@ PopClip extension to turn lines of text into Markdown lists. Choose an action fr
 
 Indentation is handled as nested lists. Existing markers are overwritten when converting between bullet and numbered styles.
 
+## Changelog
+
+- 2026-08-01: Convert to use TS and submenus
 
 ### nvUltra
 
@@ -263,6 +274,9 @@ Indentation is handled as nested lists. Existing markers are overwritten when co
 
 Originally created by Marc Abramowitz - see [https://github.com/msabramo/nvALT.popclipext](https://github.com/msabramo/nvALT.popclipext).  Icon and minor modifications by Nick Moore.
 
+## Changelog
+
+- 2026-08-01: Update to use TypeScript
 
 ### OpenURLS
 
@@ -284,6 +298,12 @@ Outdents the selection while keeping relative nesting.
 Make rich text go broke.
 
 Strips rich text formatting from selection. There are probably multiple others that do this, but it's so easy I just made it myself.
+
+
+PreviewURL
+===
+
+PopClip extension to show a popup preview for each URL in selected text.
 
 
 ### BulletList
