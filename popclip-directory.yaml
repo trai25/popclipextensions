@@ -1,3 +1,4 @@
 include:
   - "CriticMarkup.popclipext"
+  - "nvUltra.popclipext"
 versionPrefix: v

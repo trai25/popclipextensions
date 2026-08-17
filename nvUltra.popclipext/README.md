@@ -5,3 +5,7 @@
 #### Credits
 
 Originally created by Marc Abramowitz - see [https://github.com/msabramo/nvALT.popclipext](https://github.com/msabramo/nvALT.popclipext).  Icon and minor modifications by Nick Moore.
+
+## Changelog
+
+- 2026-08-01: Update to use TypeScript

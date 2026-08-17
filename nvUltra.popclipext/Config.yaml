@@ -1,9 +1,11 @@
 name: "nvUltra"
 identifier: "com.brettterpstra.popclip.extension.nvultra"
 description: "Create a note in nvUltra."
-icon: "rocket.png"
+icon: "nib.png"
 javascript file: "nvUltra.ts"
 options:
   - identifier: "nvnotebook"
     type: "string"
     label: "Folder"
+popclipVersion: 5997
+keywords: notes notebook
