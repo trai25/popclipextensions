@@ -4,6 +4,8 @@
 // description: Insert CriticMarkup
 // icon: icon.png
 // requirements: [paste]
+// popclipVersion: 5997
+// keywords: critic editing editor markdown
 
 type CriticOptions = {
   criticmarkupcomment?: string;
